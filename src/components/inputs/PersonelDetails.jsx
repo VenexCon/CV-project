@@ -2,8 +2,14 @@
 
 function PersonelDetails() {
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(e.target)
+    e.reset()
+  }
+
   return (
-      <form className="w-full mb-4">
+      <form className="w-full mb-4" onSubmit={handleSubmit}>
         <div className="w-full items-center card">   
               <h3 className="card-title text-1xl">Personal Details</h3>
               
@@ -36,9 +42,10 @@ function PersonelDetails() {
                   <label className="input-group">
                     <span>linkedIn</span>
                     <input type="text" placeholder="Your LinkedIn" className="input input-bordered flex-1 input-sm" />
-                </label>
-            </div>
+          </label>
+          <button type="submit" className="btn btn-primary type-submit btn-sm">confirm</button>
         </div>
+      </div>
     </form>
   )
 }
