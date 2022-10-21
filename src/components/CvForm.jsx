@@ -2,7 +2,7 @@
 import PersonelDetails from "./inputs/PersonelDetails"
 
 
-function CvForm() {
+function CvForm({setPerson, person}) {
 
     
     /* Pass in title as a state variable fromm App */
@@ -13,7 +13,7 @@ function CvForm() {
     <>
         <div className="border card items-center mt-4 ">
             <h2 className="card-title text-2xl">Edit</h2>
-              <PersonelDetails />
+        <PersonelDetails person={person} setPerson={setPerson} />
               
         </div>
     </>

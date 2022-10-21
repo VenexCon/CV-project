@@ -1,11 +1,33 @@
+/* imports */
 
 
-function PersonelDetails() {
+function PersonelDetails({setPerson, person}) {
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(e.target)
-    e.reset()
+    console.log(person)
+  }
+
+  const handleTitle = (e) => {
+    setPerson({ ...person, title:e.target.value })
+  }
+
+  const handleName = (e) => {
+    setPerson({...person, name: e.target.value})
+  }
+  
+  const handleEmail = (e) => {
+    setPerson({...person, email: e.target.value})
+  }
+
+  const handlePhone = (e) => {
+    setPerson({ ...person, phone: parseInt(e.target.value) })
+    console.log(typeof person.phone)
+  }
+
+  const handleLinkedin = (e) => {
+    setPerson({...person, linkedin:e.target.value})
   }
 
   return (
@@ -17,7 +39,7 @@ function PersonelDetails() {
                   
                 <label className="input-group">
                       <span>Title</span>
-                      <select className="select select-bordered max-w-xs select-sm ">
+                      <select className="select select-bordered max-w-xs select-sm" onChange={handleTitle} value ={person.title}>
                         <option disabled defaultValue={""}>Select Title</option>
                           <option>Mr</option>
                           <option>Mrs</option>
@@ -29,19 +51,23 @@ function PersonelDetails() {
                 </label>
                 <label className="input-group">
                     <span>Name</span>
-                    <input type="text" placeholder="Your Name Here" className="input input-bordered flex-1 input-sm" />
+            <input type="text" placeholder="Your Name Here" className="input input-bordered flex-1 input-sm"
+              onChange={handleName} value = {person.name} />
                   </label>
                   <label className="input-group">
                     <span>Email</span>
-                    <input type="text" placeholder="@outlook.com" className="input input-bordered flex-1 input-sm" />
+            <input type="text" placeholder="@outlook.com" className="input input-bordered flex-1 input-sm"
+              onChange={handleEmail} value = {person.email} />
                   </label>
                   <label className="input-group">
                     <span>Phone</span>
-                    <input type="tel" placeholder="+44077123456" className="input input-bordered flex-1 input-sm" />
+            <input type="num" placeholder="+44077123456" className="input input-bordered flex-1 input-sm"
+              onChange={handlePhone} value = {person.phone} />
                   </label>
                   <label className="input-group">
                     <span>linkedIn</span>
-                    <input type="text" placeholder="Your LinkedIn" className="input input-bordered flex-1 input-sm" />
+            <input type="text" placeholder="Your LinkedIn" className="input input-bordered flex-1 input-sm"
+              onChange={handleLinkedin} value = {person.linkedin} />
           </label>
           <button type="submit" className="btn btn-primary type-submit btn-sm">confirm</button>
         </div>

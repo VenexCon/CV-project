@@ -8,6 +8,15 @@ function App() {
   //Default to edit page on-load
   const [editPage, setEditPage] = useState(true);
 
+  const [person, setPerson] = useState({
+    title: "",
+    name: "",
+    email: "",
+    phone: 0,
+    linkedin: "",
+  });
+
+  // PAssed to Navbar for button elements.
   const changePage = (bool) => {
     setEditPage(bool);
   };
@@ -16,7 +25,11 @@ function App() {
     <>
       <Header />
       <Navbar changePage={changePage} />
-      {editPage ? <CvForm /> : <PreviewForm />}
+      {editPage ? (
+        <CvForm setPerson={setPerson} person={person} />
+      ) : (
+        <PreviewForm person={person} />
+      )}
     </>
   );
 }
