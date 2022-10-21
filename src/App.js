@@ -9,7 +9,7 @@ function App() {
   const [editPage, setEditPage] = useState(true);
 
   const [person, setPerson] = useState({
-    title: "",
+    title: "Mr",
     name: "",
     email: "",
     phone: 0,

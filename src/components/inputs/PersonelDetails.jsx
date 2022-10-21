@@ -40,7 +40,7 @@ function PersonelDetails({setPerson, person}) {
                 <label className="input-group">
                       <span>Title</span>
                       <select className="select select-bordered max-w-xs select-sm" onChange={handleTitle} value ={person.title}>
-                        <option disabled defaultValue={""}>Select Title</option>
+                        <option disabled Value={'Select Title'}>Select Title</option>
                           <option>Mr</option>
                           <option>Mrs</option>
                           <option>Ms</option>
@@ -69,7 +69,7 @@ function PersonelDetails({setPerson, person}) {
             <input type="text" placeholder="Your LinkedIn" className="input input-bordered flex-1 input-sm"
               onChange={handleLinkedin} value = {person.linkedin} />
           </label>
-          <button type="submit" className="btn btn-primary type-submit btn-sm">confirm</button>
+          <button type="submit" className=" w-1/2 btn btn-primary type-submit btn-sm lg:w-1/4 sm:w-full">confirm</button>
         </div>
       </div>
     </form>
