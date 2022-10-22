@@ -1,12 +1,17 @@
-import { useState } from 'react'
-
+import { useState, useRef, useEffect } from 'react'
+import Modal from '../shared/Modal'
 
 
 function EducationItem({ setEdElement, edElement, item }) {
   
   const [edState, setEdState] = useState(item)
-  /* Handle Change Funcs */
+  const [modal, setModal] = useState(false)
+  
 
+  const handleModal = () => {
+    setModal(true)
+  }
+  /* Handle Change Funcs */
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -28,7 +33,7 @@ function EducationItem({ setEdElement, edElement, item }) {
     setEdState({
       ...edState,
       school: e.target.value
-      
+
     })
   }
 
@@ -100,10 +105,11 @@ function EducationItem({ setEdElement, edElement, item }) {
         </textarea>           
       </label>
       <div className="twofields w-full flex justify-between gap-4">
-      <button className=" mx-auto btn btn-primary type-submit btn-sm lg:w-1/4 sm:w-3/4" type='submit' >Add</button>
+      <button className=" mx-auto btn btn-primary type-submit btn-sm lg:w-1/4 sm:w-3/4" type='submit' onClick={()=> handleModal()}  >Confirm</button>
         <button className=" mx-auto btn btn-primary type-submit btn-sm lg:w-1/4 sm:w-3/4" onClick={handleDelete}>
           Delete</button>
-        </div>
+      </div>
+      {modal && <Modal />}
         </form>
   )
 }

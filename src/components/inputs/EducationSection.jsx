@@ -1,7 +1,7 @@
-import { useState } from 'react';
+
 import EducationItem from './EducationItem'
 import { v4 as uuidv4 } from 'uuid';
-function EducationSection() {
+function EducationSection({edElement, setEdElement}) {
 
     /* @todo - Create function that appends a list item on click  */
     /* Assign an id using UUID */
@@ -9,10 +9,9 @@ function EducationSection() {
     /* Using state, create a state array, that holds a passed object onSubmit, for the education & work experience sections.  */
 
   /* Place in App.js once completed */
-  const [edElement, setEdElement] = useState([])
+  
  
   //passes a new object down to the children
- 
 
   const appendNewSection = () => {
     let key = uuidv4()
