@@ -32,7 +32,7 @@ function PersonelDetails({setPerson, person}) {
 
   return (
       <form className="w-full mb-4" onSubmit={handleSubmit}>
-        <div className="w-full items-center card">   
+        <div className="items-center card">   
               <h3 className="card-title text-1xl">Personal Details</h3>
               
               <div className="form-control gap-3  w-2/3">

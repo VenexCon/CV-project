@@ -16,7 +16,7 @@ function App() {
     linkedin: "",
   });
 
-  // PAssed to Navbar for button elements.
+  // Passed to Navbar for button elements.
   const changePage = (bool) => {
     setEditPage(bool);
   };
