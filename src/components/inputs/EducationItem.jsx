@@ -28,6 +28,7 @@ function EducationItem({ setEdElement, edElement, item }) {
     setEdState({
       ...edState,
       school: e.target.value
+      
     })
   }
 
