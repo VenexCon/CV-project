@@ -40,7 +40,7 @@ function PersonelDetails({setPerson, person}) {
                 <label className="input-group">
                       <span>Title</span>
                       <select className="select select-bordered max-w-xs select-sm" onChange={handleTitle} value ={person.title}>
-                        <option disabled Value={'Select Title'}>Select Title</option>
+                        <option disabled value={'Select Title'}>Select Title</option>
                           <option>Mr</option>
                           <option>Mrs</option>
                           <option>Ms</option>
