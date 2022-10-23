@@ -3,15 +3,8 @@ import EducationItem from './EducationItem'
 import { v4 as uuidv4 } from 'uuid';
 function EducationSection({edElement, setEdElement}) {
 
-    /* @todo - Create function that appends a list item on click  */
-    /* Assign an id using UUID */
-    /* Delete using .filter or .map */
-    /* Using state, create a state array, that holds a passed object onSubmit, for the education & work experience sections.  */
-
-  /* Place in App.js once completed */
-  
- 
-  //passes a new object down to the children
+  //passes a new object down to the children as prop
+  //@todo - Update with address & Intro Description & Verification
 
   const appendNewSection = () => {
     let key = uuidv4()
@@ -37,7 +30,8 @@ function EducationSection({edElement, setEdElement}) {
       })}
       
       
-      <button className="mt-5 mx-auto w-3/4 btn btn-primary type-submit btn-sm lg:w-1/4 sm:w-3/4" onClick={appendNewSection}>Add Another</button>
+      <button className="mt-5 mx-auto w-3/4 btn btn-primary type-submit btn-sm lg:w-1/4 sm:w-3/4"
+        onClick={appendNewSection}>Add Education</button>
       
     </div>
     

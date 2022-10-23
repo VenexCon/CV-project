@@ -9,13 +9,16 @@ function App() {
   const [editPage, setEditPage] = useState(true);
 
   const [edElement, setEdElement] = useState([]);
+  const [workElement, setWorkElement] = useState([]);
 
   const [person, setPerson] = useState({
     title: "",
     name: "",
+    address: "",
     email: "",
     phone: 0,
     linkedin: "",
+    description: "",
   });
 
   // Passed to Navbar for button elements.
@@ -33,9 +36,15 @@ function App() {
           person={person}
           edElement={edElement}
           setEdElement={setEdElement}
+          workElement={workElement}
+          setWorkElement={setWorkElement}
         />
       ) : (
-        <PreviewForm person={person} />
+        <PreviewForm
+          person={person}
+          edElement={edElement}
+          workElement={workElement}
+        />
       )}
     </>
   );

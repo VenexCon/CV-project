@@ -47,6 +47,11 @@ function PersonelDetails({setPerson, person}) {
                     <span>Email</span>
             <input type="text" placeholder="@outlook.com" className="input input-bordered flex-1 input-sm"
               onChange={handleInputChange} value = {person.email} name={'email'} />
+          </label>
+          <label className="input-group">
+                    <span>Address</span>
+            <input type="text" placeholder="1 best drive, LL12 3fx" className="input input-bordered flex-1 input-sm"
+              onChange={handleInputChange} value = {person.address} name={'address'} />
                   </label>
                   <label className="input-group">
                     <span>Phone</span>
@@ -58,6 +63,13 @@ function PersonelDetails({setPerson, person}) {
             <input type="text" placeholder="Your LinkedIn" className="input input-bordered flex-1 input-sm"
              onChange={handleInputChange}value = {person.linkedin} name={'linkedin'} />
           </label>
+
+          <label className="input-group input-group-vertical h-fit mb-2 flex flex-cols">
+        <span className='mb-1 border'>Describe Yourself</span>
+        <textarea className='textarea border' placeholder='I am a...'
+          onChange={handleInputChange} defaultValue={person.description} name= "description" >
+        </textarea>
+      </label>
           
         </div>
       </div>
