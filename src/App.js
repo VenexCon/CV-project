@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import CvForm from "./components/CvForm";
 import PreviewForm from "./components/PreviewForm";
-import Modal from "./components/shared/Modal";
 
 function App() {
   //Default to edit page on-load
@@ -12,7 +11,7 @@ function App() {
   const [edElement, setEdElement] = useState([]);
 
   const [person, setPerson] = useState({
-    title: "Mr",
+    title: "",
     name: "",
     email: "",
     phone: 0,

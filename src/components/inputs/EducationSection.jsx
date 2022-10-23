@@ -25,7 +25,6 @@ function EducationSection({edElement, setEdElement}) {
   }
     
     setEdElement([...edElement, edObject])
-    console.log(edElement)
   }
 
   return (
