@@ -1,25 +1,32 @@
+import PersonCard from "./previews/PersonCard"
+import EducationCard from "./previews/EducationCard"
 
 
 function PreviewForm({person, edElement, workElement}) {
   return (
-    <div>
-      <h2>Title: {person.title}</h2>
-      <h2>Name: {person.name}</h2>
-      <h2>Email: {person.email}</h2>
-      <h2>Phone: {person.phone}</h2>
-      <h2>Email: {person.linkedin}</h2>
-      <h2>Address: {person.address}</h2>
-      <h2>Description: {person.description}</h2>
+    <>
+      
+      <PersonCard person={person} />
+      
+
+
+      <div className="w-2/3 flex-col mx-auto flex mt-4 justify-center border">
+        <h3 className="mb-4 text-2xl text-slate-600">Education</h3>
 
       {edElement.map(item => {
-        return <p>{JSON.stringify(item)}</p>
+        return <EducationCard item= {item} />
       })}
-
+        
+      </div> 
+      
+      <div className="w-2/3 flex-col mx-auto flex mt-4 justify-center border">
+      <h3 className="mb-4 text-2xl text-slate-600">Work Experience</h3>
        {workElement.map(item => {
         return <p>{JSON.stringify(item)}</p>
-      })}
+       })}
+      </div>
       
-    </div>
+  </>  
   )
 }
 
