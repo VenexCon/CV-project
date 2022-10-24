@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { FaMapMarkerAlt, FaPhoneAlt, FaLinkedin } from "react-icons/fa";
 import {AiOutlineMail} from 'react-icons/ai'
 
