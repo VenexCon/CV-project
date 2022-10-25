@@ -46,7 +46,7 @@ function PersonelDetails({setPerson, person}) {
                   <label className="input-group">
                     <span>Email</span>
             <input type="text" placeholder="@outlook.com" className="input input-bordered flex-1 input-sm"
-              onChange={handleInputChange} value = {person.email} name={'email'} />
+              onChange={handleInputChange} value = {person.email} name={'email'} pattern = "/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;" />
           </label>
           <label className="input-group">
                     <span>Address</span>

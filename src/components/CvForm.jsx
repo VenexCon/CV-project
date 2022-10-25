@@ -11,7 +11,7 @@ function CvForm({setPerson, person, edElement, setEdElement, workElement, setWor
 
   return (
     <>
-        <div className="border card items-center mt-4 w-3/4 mx-auto ">
+        <div className="border card items-center mt-4 w-3/4 mx-auto sm:w-full ">
             <h2 className="card-title text-2xl">Edit Page</h2>
         <PersonelDetails person={person} setPerson={setPerson} />
         <EducationSection person = {person} setPerson = {setPerson} edElement = {edElement} setEdElement = {setEdElement} />

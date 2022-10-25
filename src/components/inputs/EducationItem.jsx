@@ -53,9 +53,9 @@ function EducationItem({ setEdElement, edElement, item }) {
           onChange={handleInputChange} name= "degree"  />
       </label>
 
-      <div className="twofields w-full flex justify-between gap-4">
+      <div className="twofields w-full flex justify-between gap-4 flex-col ">
 
-        <label className="input-group input-group-vertical w-full h-fit mb-2 flex flex-cols">
+        <label className="input-group input-group-vertical w-full h-fit mb-2 flex flex-col">
           <span className='mb-1 border'>From</span>
           <input type="date" placeholder="Start Date" className="input input-bordered flex-1 input-sm"
             onChange={handleInputChange} defaultValue={item.start} name= "start"  />

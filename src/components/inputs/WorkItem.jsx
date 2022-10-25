@@ -54,7 +54,7 @@ const [workState, setWorkState] = useState(item)
           onChange={handleInputChange} name= "company"  />
       </label>
 
-      <div className="twofields w-full flex justify-between gap-4">
+      <div className="twofields w-full flex flex-col justify-between gap-4">
 
         <label className="input-group input-group-vertical w-full h-fit mb-2 flex flex-cols">
           <span className='mb-1 border'>From</span>

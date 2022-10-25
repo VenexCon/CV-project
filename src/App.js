@@ -16,7 +16,7 @@ function App() {
     name: "",
     address: "",
     email: "",
-    phone: 0,
+    phone: "",
     linkedin: "",
     description: "",
   });
