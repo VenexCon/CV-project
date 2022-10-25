@@ -37,8 +37,8 @@ function EducationItem({ setEdElement, edElement, item }) {
   }
 
   return (
-    <form className="w-2/3 mx-auto items-center card" onSubmit={handleSubmit}>
-      <h3 className='mb-4'>Education Form</h3>
+    <form className="w-2/3 mx-auto items-center card mt-4" onSubmit={handleSubmit}>
+      <h3 className='mb-4 font-bold'>Education Form</h3>
       {/* Create inputs */}
 
       <label className="input-group input-group-vertical w-full h-fit mb-2 flex flex-cols">
@@ -76,8 +76,8 @@ function EducationItem({ setEdElement, edElement, item }) {
         </textarea>
       </label>
       <div className="twofields w-full flex justify-between gap-4">
-        <button className=" mx-auto btn btn-primary type-submit btn-sm lg:w-1/4 sm:w-3/4" type='submit' ref={buttonRef} onClick={handleConfirm}>Confirm</button>
-        <button className=" mx-auto btn btn-primary type-submit btn-sm lg:w-1/4 sm:w-3/4" onClick={handleDelete}>
+        <button className=" flex-none mx-auto btn btn-primary type-submit btn-sm md:w-1/2 lg:w-1/4 sm:w-3/4" type='submit' ref={buttonRef} onClick={handleConfirm}>Confirm</button>
+        <button className=" flex-none mx-auto btn btn-primary type-submit btn-sm md:w-1/2 lg:w-1/4 sm:w-3/4" onClick={handleDelete}>
           Delete</button>
       </div>
       

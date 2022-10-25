@@ -22,7 +22,7 @@ function EducationSection({edElement, setEdElement}) {
 
   return (
       <div className="w-full mt-4 mb-4 text-center card ">
-        <h2 className="font-bold text-2xl">Education Section</h2>
+        <h2 className="font-bold text-2xl underline">Education Section</h2>
       {/* List items here */}
       
         {edElement.map(item => {
@@ -30,7 +30,7 @@ function EducationSection({edElement, setEdElement}) {
       })}
       
       
-      <button className="mt-5 mx-auto w-3/4 btn btn-primary type-submit btn-sm lg:w-1/4 sm:w-3/4"
+      <button className="mt-5 mx-auto w-3/4 btn btn-primary type-submit btn-sm lg:w-1/4 sm:w-3/4 underline"
         onClick={appendNewSection}>Add Education</button>
       
     </div>
