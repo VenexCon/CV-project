@@ -4,7 +4,7 @@ import WorkCard from "./previews/WorkCard"
 
 function PreviewForm({person, edElement, workElement}) {
   return (
-    <>
+    <div className = "mx-auto w-3/4 border-double border-8 border-gray-400 mt-4">
       
       <PersonCard person={person} />
       
@@ -26,7 +26,7 @@ function PreviewForm({person, edElement, workElement}) {
        })}
       </div>
       
-  </>  
+  </div>  
   )
 }
 
